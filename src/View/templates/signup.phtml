@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="http://cinema.local/style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="login-form-container">
+    <form action="" method="post">
+        <input type="email" name="email" placeholder="E-mail" required/>
+        <input type="email" name="email-again" placeholder="E-mail again" required/>
+        <input type="password" name="passwd" placeholder="Password" required/>
+        <input type="password" name="passwd-again" placeholder="Password Again" required/>
+        <input type="submit" name="signup" value="Signup" required/>
+    </form>
+    <?php if (isset($error)): ?>
+        <span>
+        <?php echo $error; ?>
+        </span>
+    <?php endif ?>
+</div>
+</body>
+</html>

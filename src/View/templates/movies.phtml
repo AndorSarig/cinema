@@ -1,0 +1,41 @@
+<div class="filters">
+    <div class="form">
+        <form action="" method="get">
+            <select name="genre">
+                    <option selected value="">All genre</option>
+                <?php foreach ($genre as $value): ?>
+                    <option value="<?php echo $value ?>"><?php echo $value ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select name="release_date">
+                <option selected value="">All release year</option>
+                <?php foreach ($movies as $movie): ?>
+                    <option value="<?php echo $movie->getReleaseDate(); ?>"><?php echo $movie->getReleaseDate(); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <input type="date" name="date" value="">
+            <select name="sort_by_release">
+                <option selected disabled>Release Date Order</option>
+                <option value="ASC">Release Date Asc</option>
+                <option value="DESC">Release Date Desc</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+</div>
+<?php foreach ($movies as $movie): ?>
+    <a href="<?php echo "/movie/{$movie->getId()}/"; ?>">
+        <div class="movie">
+            <img class="movie-img" src="<?php echo $movie->getImgURL(); ?>" />
+            <h3><?php echo $movie->getTitleText(); ?></h3>
+            <h5><?php echo implode(', ', $movie->getGenres()); ?></h5>
+        </div>
+    </a>
+<?php endforeach; ?>
+<div class="pagination">
+    <form action="" method="get">
+        <?php for ($page = 1; $page <= $pageNr; $page++): ?>
+            <button type="submit" value="<?php echo $page; ?>" name="page"><?php echo $page; ?></button>
+        <?php endfor; ?>
+    </form>
+</div>

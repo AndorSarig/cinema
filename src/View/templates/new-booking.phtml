@@ -1,0 +1,24 @@
+<div class="seats-container">
+    <div class="seats">
+        <form action="" method="post" id="booking-form">
+            <?php for($id=1; $id<=$screening->getRoom()->getCapacity(); $id++): ?>
+                <input type="radio" name="seat" value="<?php echo $id; ?>" id="<?php echo $id; ?>" class="seat" <?php if(in_array($id, $screening->getBookedSeatsIds())):?> disabled="disabled" <?php endif ?> />
+                <label for="<?php echo $id; ?>">
+                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cinema-53-283790.png" class="seat-img" />
+                </label>
+                <?php if ($id%sqrt($screening->getRoom()->getCapacity()) === 0): ?>
+                    <br />
+                <?php endif ?>
+            <?php endfor; ?>
+        </form>
+    </div>
+</div>
+<div class="screen-container">
+    <img src="https://sr1.cinemacity.ro/ReservationsRO/Assets/Images/PL_RES/screen.png" class="screen" />
+</div>
+<div class="screening-info">
+    <p>Room: <?php echo $screening->getRoom()->getNameText(); ?></p>
+    <p>Date: <?php echo $screening->getDate(); ?></p>
+    <p>Nr of free seats:</p>
+</div>
+<button type="submit" form="booking-form" value="Book" class="submit-booking">Book</button>

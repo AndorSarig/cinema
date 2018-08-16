@@ -1,0 +1,39 @@
+<div class="bookings-container">
+    <ul>
+    <?php foreach($bookings as $booking): ?>
+        <li><div class="booking">
+            <table>
+                <col width="100">
+                <col width="200">
+                <col width="100">
+                <col width="80">
+            <tr>
+                <th>Booking ID</th>
+                <th>Date</th>
+                <th>Room</th>
+                <th>Seat Nr.</th>
+            </tr>
+            <tr>
+                <td>
+                    <?php echo $booking->getId(); ?>
+                </td>
+                <td>
+                    <?php echo $booking->getScreening()->getDate(); ?>
+                </td>
+                <td>
+                    <?php echo $booking->getScreening()->getRoom()->getNameText(); ?>
+                </td>
+                <td>
+                    <?php echo $booking->getReservedPlace(); ?>
+                </td>
+                <td rowspan="2">
+                    <button>
+                        Reject
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+        </li>
+<?php endforeach; ?></ul>
+</div>

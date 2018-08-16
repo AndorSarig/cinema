@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="http://cinema.local/style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="/movies/">
+    <p>
+        ← Back to Movies
+    </p>
+</a>
+<div class="login-form-container">
+    <?php if (isset($error)): ?>
+        <span>
+            <?php echo $error; ?>
+        </span>
+    <?php endif; ?>
+    <form action="" method="post">
+        <input type="email" name="email" placeholder="E-mail" />
+        <input type="password" name="passwd" placeholder="Password" />
+        <input type="submit" name="login" value="Login">
+    </form>
+    <a href="/signup/">
+        <p>
+            Register here
+        </p>
+    </a>
+</div>
+</body>
+</html>

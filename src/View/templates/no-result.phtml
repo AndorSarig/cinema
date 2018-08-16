@@ -1,0 +1,23 @@
+<div class="filters">
+    <div class="form">
+        <form action="" method="get">
+            <select name="genre">
+                <option selected disabled>All</option>
+                <?php foreach ($genre as $value): ?>
+                    <option value="<?php echo $value ?>"><?php echo $value ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select name="releaseDate">
+                <option selected disabled>All</option>
+                <?php foreach ($movies as $movie): ?>
+                    <option value="<?php echo $movie->getReleaseDate(); ?>"><?php echo $movie->getReleaseDate(); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <input type="date" name="date">
+            <input type="submit">
+        </form>
+    </div>
+</div>
+<h1 class="no-result">
+    No results found!
+</h1>

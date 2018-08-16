@@ -1,0 +1,16 @@
+{
+    "name": "andorsarig/cinema",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andor Sarig",
+            "email": "andor.sarig@evozon.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {"": "/src"}
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="http://cinema.local/style/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="nav-bar">
+    <a href="/movies/">
+        <button>
+            Movies
+        </button>
+    </a>
+    <?php if (!isset($_SESSION['user-id'])): ?>
+    <a href="/login/">
+        <button id="right">
+            Login
+        </button>
+    </a>
+    <?php else: ?>
+        <a href="/logout/">
+            <button id="right">
+                Logout
+            </button>
+        </a>
+        <a href="/bookings/">
+            <button>
+                Bookings
+            </button>
+        </a>
+    <?php endif ?>
+</div>
+<div class="container">
+    <?php echo $containerContent; ?>
+</div>
+</body>
+</html>

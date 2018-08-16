@@ -1,0 +1,38 @@
+<div class="img">
+    <img class="big-movie-img" src="<?php echo $movie->getImgURL(); ?>" />
+</div>
+<div class="content">
+    <h2>
+        <?php echo $movie->getTitleText(); ?>
+    </h2>
+    <br />
+    <h4>
+        <?php echo implode(', ', $movie->getGenres()); ?>
+    </h4>
+    <p>
+        <?php echo $movie->getDescription(); ?>
+    </p>
+</div>
+
+<div class="screenings-container">
+    <h2>
+        Screenings Ahead
+    </h2>
+    <div class="screenings">
+    <?php foreach ($screenings as $screening): ?>
+        <div class="screening">
+            <p><?php echo $screening->getDate(); ?></p>
+            <p>
+                <span id="<?php echo $screening->getId(); ?>"><?php echo $screening->getFreeSeatsNumber(); ?></span>
+                seats available
+            </p>
+            <a href="/screening/<?php echo $screening->getId(); ?>">
+                <button>
+                    Book
+                </button>
+            </a>
+        </div>
+    <?php endforeach; ?>
+    </div>
+</div>
+<script src="http://cinema.local/style/functions.js"></script>

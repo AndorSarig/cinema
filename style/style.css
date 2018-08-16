@@ -1,0 +1,380 @@
+/* Body */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #262626;
+}
+
+/* Navbar */
+
+div.nav-bar {
+    width: 70vw;
+    height: 7vh;
+    background-color: #4c4c4c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.nav-bar button {
+    position: relative;
+    float: left;
+    border: none;
+    height: 100%;
+    background-color: #565656;
+    color: white;
+    padding: 0;
+    min-width: 100px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1vw;
+}
+
+div.nav-bar button#right {
+    float: right;
+}
+
+/* Container */
+
+div.container {
+    position: relative;
+    width: 70vw;
+    min-height: 70vh;
+    background-color: #4c4c4c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: block;
+    overflow: auto;
+    padding-bottom: 15px;
+}
+
+div.container div.filters {
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 10px;
+    background-color: silver;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.container div.filters div.form {
+    display: table;
+    margin: 0 auto;
+}
+
+div.container div.filters input {
+    width: 30%;
+    min-width: 100px;
+}
+
+div.container div.movie {
+    width: 20%;
+    min-height: 260px;
+    min-width: 240px;
+    margin-left: 15px;
+    margin-top: 2vh;
+    float: left;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-transition: border 0.2s;
+    border: 3px solid white;
+}
+
+div.container div.movie img.movie-img {
+    width: 100%;
+    min-width: 240px;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid grey;
+}
+
+div.container div.movie h3 {
+    margin: 0px;
+    text-align: center;
+    vertical-align: center;
+    color: #3a3a3a;
+    -webkit-transition: color 0.4s;
+}
+
+div.container div.movie h5 {
+    margin: 5px;
+    text-align: center;
+    vertical-align: center;
+    color: #282828;
+    -webkit-transition: color 0.4s;
+}
+
+div.container div.movie:hover {
+    border: 3px solid orange;
+}
+
+div.container div.movie:hover h3, h5 {
+    color: #e5a400;
+}
+
+div.container h1.no-result {
+    font-size: 10vh;
+    margin-top: 20vh;
+    text-align: center;
+    color: #999999;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+}
+
+/* SINGLE MOVIE PAGE */
+
+div.img {
+    background-color: #1c1c1c;
+    border-bottom: 1px solid grey;
+}
+
+div.img img.big-movie-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 500px;
+}
+
+div.content {
+    margin: 25px;
+    background-color: white;
+    border-radius: 15px;
+    display: block;
+    overflow: auto;
+}
+
+div.content h2 {
+    color: darkorange;
+    display: inline-block;
+    background-color: #262626;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+    padding-right: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.content h4 {
+    color: darkgrey;
+    display: inline-block;
+    background-color: #5b5b5b;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding: 5px;
+    padding-right: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.content p {
+    margin: 15px;
+    margin-bottom: 10px;
+}
+
+div.screenings-container {
+    margin: 25px;
+    background-color: white;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    display: block;
+    overflow: auto;
+}
+
+div.screenings-container h2 {
+    color: darkorange;
+    display: inline-block;
+    background-color: #262626;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding: 10px;
+    padding-right: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.screenings div.screening {
+    float: left;
+    background-color: #e0e0e0;
+    width: 20%;
+    min-width: 150px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    overflow: auto;
+    border-radius: 10px;
+    border: 2px solid darkorange;
+}
+
+div.screenings div.screening button {
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid orange;
+    background-color: #5b5b5b;
+    color: orange;
+    -webkit-transition: all 0.3s;
+}
+
+div.screenings div.screening button:hover {
+    background-color: #ff9000;
+    color: white;
+}
+
+/* LOGIN */
+
+div.login-form-container {
+    background-color: grey;
+    width: 20vw;
+    min-width: 350px;
+    display: block;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 2px black;
+}
+
+div.login-form-container input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    line-height: 2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* BOOKING PAGE */
+
+div.seats-container {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.seats {
+    display: inline-block;
+    margin-top: 20px;
+
+}
+
+input[type=radio] {
+    visibility: hidden;
+}
+
+img.seat-img {
+    width:40px;
+}
+
+input[type=radio]:checked + label > img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+input[type=radio][disabled] + label > img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+input[type=submit] {
+
+}
+
+img.screen {
+    display: block;
+    margin: 10% auto;
+}
+
+button.submit-booking {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    -webkit-transition: all 0.3s;
+}
+
+button.submit-booking:hover {
+    background-color: dimgrey;
+    border: 2px solid darkorange;
+}
+
+/* BOOKINGS PAGE */
+
+ul {
+    list-style: none;
+}
+
+div.bookings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.booking {
+    display: inline-block;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* PAGINATION BUTTONS */
+
+.pagination {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    right: 50%;
+}
+
+.pagination button {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
