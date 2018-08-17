@@ -41,7 +41,8 @@ class MovieController
     public function getMovieById() : void
     {
         $movieRepo      = new MovieRepository();
-        $movieId        = URIIterperer::getIdFromURIFor('movie', $_SESSION['REQUEST_URI']);        $movie          = $movieRepo->getMovieById($id['id']);
+        $movieId        = URIIterperer::getIdFromURIFor('movie', $_SERVER['REQUEST_URI']);
+        $movie          = $movieRepo->getMovieById($movieId);
         $screeningRepo  = new ScreeningRepository();
         $screenings     = $screeningRepo->getScreeningsForMovie($movieId);
         $renderer       = new Renderer();

@@ -39,7 +39,7 @@ class BookingController
     public function addBooking() : void
     {
         $repo           = new BookingRepository();
-        $screeningId    = URIIterperer::getIdFromURIFor('screening', $_SESSION['REQUEST_URI']);
+        $screeningId    = URIIterperer::getIdFromURIFor('screening', $_SERVER['REQUEST_URI']);
         $repo->insertBooking([
             "user_id"       => $_SESSION['user-id'],
             "screening_id"  => $screeningId,

@@ -1,3 +1,7 @@
+CREATE DATABASE `cinema`;
+
+USE `cinema`;
+
 CREATE TABLE `user` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`email` varchar(50) NOT NULL UNIQUE,

@@ -1,0 +1,14 @@
+php index.php --movie-id 1 --date '2018-08-17 13:00' --room-id 1
+php index.php --movie-id 2 --date '2018-08-17 12:00' --room-id 2
+php index.php --movie-id 3 --date '2018-08-18 16:30' --room-id 3
+php index.php --movie-id 4 --date '2018-08-19 14:00' --room-id 4
+php index.php --movie-id 5 --date '2018-08-18 10:00' --room-id 2
+php index.php --movie-id 6 --date '2018-08-19 21:00' --room-id 4
+php index.php --movie-id 7 --date '2018-08-17 22:00' --room-id 3
+php index.php --movie-id 8 --date '2018-08-20 18:30' --room-id 1
+php index.php --movie-id 6 --date '2018-08-21 16:15' --room-id 1
+php index.php --movie-id 1 --date '2018-08-20 19:45' --room-id 3
+php index.php --movie-id 1 --date '2018-08-18 20:00' --room-id 2
+php index.php --movie-id 7 --date '2018-08-19 21:00' --room-id 4
+php index.php --movie-id 6 --date '2018-08-26 17:30' --room-id 4
+php index.php --movie-id 2 --date '2018-08-18 12:00' --room-id 4

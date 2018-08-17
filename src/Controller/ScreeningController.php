@@ -9,6 +9,7 @@
 namespace Controller;
 
 
+use Model\Helpers\URIIterperer;
 use View\Renderer;
 use Model\Repositories\ScreeningRepository;
 
@@ -21,7 +22,7 @@ class ScreeningController
             header('Location: /login/');
         }
         $screeningRepo  = new ScreeningRepository();
-        $screeningId    = URIIterperer::getIdFromURIFor('screening', $_SESSION['REQUEST_URI']);
+        $screeningId    = URIIterperer::getIdFromURIFor('screening', $_SERVER['REQUEST_URI']);
         $screening      = $screeningRepo->getScreeningById($screeningId);
         $renderer       = new Renderer();
         $pageToRender   = 'src/View/templates/new-booking.phtml';

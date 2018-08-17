@@ -14,6 +14,7 @@ use Model\uploader\ReadCSV;
 use Model\uploader\UploadGenre;
 use Model\uploader\UploadMovie;
 use Model\uploader\UploadRoom;
+use Model\uploader\UploadScreening;
 use Model\uploader\Validators\CSVFileValidator;
 
 /**

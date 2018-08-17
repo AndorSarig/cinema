@@ -4,7 +4,7 @@
 
 const DSN = 'mysql:host=localhost;dbname=cinema';
 const DB_USER = 'root';
-const DB_PASSWD = '';
+const DB_PASSWD = 'password';
 
 // Movie filters
 
